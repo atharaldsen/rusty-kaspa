@@ -199,6 +199,7 @@ impl std::fmt::Display for NonContextualMasses {
 pub struct BlockMassLimits {
     pub storage: u64,
     pub compute: u64,
+    /// Transient mass is charged 1:1 per serialized byte, so this limit is also the block body byte cap.
     pub transient: u64,
 }
 
